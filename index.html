@@ -51,6 +51,25 @@
         .border-accent {
             border-color: #C7A779;
         }
+
+        /* NEW: Styles to ensure hours list alignment is perfect on all devices */
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        .hours-list .day {
+            min-width: 100px; /* Ensure day names have space */
+        }
+        .hours-list .time {
+            text-align: right;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
@@ -73,8 +92,8 @@
                         <span class="gr-text language-hidden">Κριτικές</span>
                     </a>
                     <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-brand-accent dark:hover:text-brand-accent transition-colors duration-300 font-medium">
-                        <span class="en-text">Location & Book</span>
-                        <span class="gr-text language-hidden">Τοποθεσία & Κράτηση</span>
+                        <span class="en-text">Location & Hours</span>
+                        <span class="gr-text language-hidden">Τοποθεσία & Ώρες</span>
                     </a>
                     <button id="langToggle" class="bg-brand-accent hover:bg-accent-dark text-white px-3 py-1.5 rounded-md text-sm font-semibold transition-colors duration-300">
                         <span class="en-text">Ελληνικά</span>
@@ -198,8 +217,8 @@
                         <span class="gr-text language-hidden">Το Βασιλικό Πακέτο</span>
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6">
-                        <span class="en-text">Full Haircut + Beard Trim.</span>
-                        <span class="gr-text language-hidden">Πλήρες Κούρεμα + Κούρεμα Γενειάδας.</span>
+                        <span class="en-text">Full Haircut + Beard Trim. The complete look.</span>
+                        <span class="gr-text language-hidden">Πλήρες Κούρεμα + Κούρεμα Γενειάδας. Η ολοκληρωμένη εμφάνιση.</span>
                     </p>
                     <div class="text-3xl font-extrabold text-brand-primary dark:text-brand-accent">€14</div>
                 </div>
@@ -290,14 +309,14 @@
                                     <span class="en-text">Operating Hours</span>
                                     <span class="gr-text language-hidden">Ώρες Λειτουργίας</span>
                                 </p>
-                                <ul class="text-lg space-y-1">
-                                    <li class="flex justify-between"><span><span class="en-text">Monday</span><span class="gr-text language-hidden">Δευτέρα</span>:</span> <span>8:30–12:40 & 15:00–17:00</span></li>
-                                    <li class="flex justify-between"><span><span class="en-text">Tuesday</span><span class="gr-text language-hidden">Τρίτη</span>:</span> <span>8:30–12:40 & 15:00–17:00</span></li>
-                                    <li class="flex justify-between"><span><span class="en-text">Wednesday</span><span class="gr-text language-hidden">Τετάρτη</span>:</span> <span>8:30–12:40 & 15:00–17:00</span></li>
-                                    <li class="flex justify-between font-bold text-brand-accent"><span><span class="en-text">Thursday</span><span class="gr-text language-hidden">Πέμπτη</span>:</span> <span><span class="en-text">Closed</span><span class="gr-text language-hidden">Κλειστά</span></span></li>
-                                    <li class="flex justify-between"><span><span class="en-text">Friday</span><span class="gr-text language-hidden">Παρασκευή</span>:</span> <span>8:30–12:40 & 15:00–17:00</span></li>
-                                    <li class="flex justify-between"><span><span class="en-text">Saturday</span><span class="gr-text language-hidden">Σάββατο</span>:</span> <span>8:30–13:00</span></li>
-                                    <li class="flex justify-between font-bold text-brand-accent"><span><span class="en-text">Sunday</span><span class="gr-text language-hidden">Κυριακή</span>:</span> <span><span class="en-text">Closed</span><span class="gr-text language-hidden">Κλειστά</span></span></li>
+                                <ul class="text-lg space-y-1 hours-list">
+                                    <li><span class="day"><span class="en-text">Monday</span><span class="gr-text language-hidden">Δευτέρα</span>:</span> <span class="time">8:30–12:40 & 15:00–17:00</span></li>
+                                    <li><span class="day"><span class="en-text">Tuesday</span><span class="gr-text language-hidden">Τρίτη</span>:</span> <span class="time">8:30–12:40 & 15:00–17:00</span></li>
+                                    <li><span class="day"><span class="en-text">Wednesday</span><span class="gr-text language-hidden">Τετάρτη</span>:</span> <span class="time">8:30–12:40 & 15:00–17:00</span></li>
+                                    <li class="font-bold text-brand-accent"><span class="day"><span class="en-text">Thursday</span><span class="gr-text language-hidden">Πέμπτη</span>:</span> <span class="time"><span class="en-text">Closed</span><span class="gr-text language-hidden">Κλειστά</span></span></li>
+                                    <li><span class="day"><span class="en-text">Friday</span><span class="gr-text language-hidden">Παρασκευή</span>:</span> <span class="time">8:30–12:40 & 15:00–17:00</span></li>
+                                    <li><span class="day"><span class="en-text">Saturday</span><span class="gr-text language-hidden">Σάββατο</span>:</span> <span class="time">8:30–13:00</span></li>
+                                    <li class="font-bold text-brand-accent"><span class="day"><span class="en-text">Sunday</span><span class="gr-text language-hidden">Κυριακή</span>:</span> <span class="time"><span class="en-text">Closed</span><span class="gr-text language-hidden">Κλειστά</span></span></li>
                                 </ul>
                             </div>
                         </div>
@@ -320,19 +339,14 @@
                 
                 <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden h-full min-h-80">
                     <iframe 
-                        src="https://maps.google.com/maps?q=John's%20Barbers%20Kissonerga%2C%20Paphos&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.070003056345!2d32.3995304!3d34.8016597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e70e9a59405d4f%3A0x633d99e09d18721c!2s3A%20Spyrou%20Kyprianou%20St%2C%20Kissonerga%2C%20Cyprus!5e0!3m2!1sen!2suk!4v1699027200000!5m2!1sen!2suk" 
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
                         allowfullscreen="" 
-                        loading="lazy">
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <div class="hidden">
-                         <p class="p-8 text-center text-gray-400">
-                             <span class="en-text">Google Map Placeholder: Embed a live map here!</span>
-                             <span class="gr-text language-hidden">Ενσωμάτωση Google Map: Ενσωματώστε έναν ζωντανό χάρτη εδώ!</span>
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
