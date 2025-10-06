@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Barbers - Quality Cuts. Unbeatable Value. | Κουρείο του Γιάννη</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // New Branding Colors: Deep Forest Green with Gold Accent
+                        'brand-primary': '#1D352C', 
+                        'brand-accent': '#C7A779', 
+                        'accent-dark': '#B89B6C',
+                        'light-bg': '#F7F7F7', // Lighter background for services/about
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Import the Inter font (retained, but ensures it's available) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Hero pattern: Subtler, more premium texture */
+        .hero-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(29, 53, 44, 0.1) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .language-hidden {
+            display: none;
+        }
+
+        /* Custom class for the gold border */
+        .border-accent {
+            border-color: #C7A779;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+    <nav class="bg-white dark:bg-gray-800 shadow-xl fixed w-full top-0 z-50 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="text-3xl font-extrabold tracking-tight text-brand-primary dark:text-brand-accent">
+                        <span class="en-text">JOHN'S BARBERS</span>
+                        <span class="gr-text language-hidden">ΚΟΥΡΕΙΟ ΤΟΥ ΓΙΑΝΝΗ</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#services" class="text-gray-600 dark:text-gray-300 hover:text-brand-accent dark:hover:text-brand-accent transition-colors duration-300 font-medium">
+                        <span class="en-text">Services</span>
+                        <span class="gr-text language-hidden">Υπηρεσίες</span>
+                    </a>
+                    <a href="#testimonials" class="text-gray-600 dark:text-gray-300 hover:text-brand-accent dark:hover:text-brand-accent transition-colors duration-300 font-medium">
+                        <span class="en-text">Testimonials</span>
+                        <span class="gr-text language-hidden">Κριτικές</span>
+                    </a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-brand-accent dark:hover:text-brand-accent transition-colors duration-300 font-medium">
+                        <span class="en-text">Location</span>
+                        <span class="gr-text language-hidden">Τοποθεσία</span>
+                    </a>
+                    <button id="langToggle" class="bg-brand-accent hover:bg-accent-dark text-white px-3 py-1.5 rounded-md text-sm font-semibold transition-colors duration-300">
+                        <span class="en-text">Ελληνικά</span>
+                        <span class="gr-text language-hidden">English</span>
+                    </button>
+                    <a href="tel:+35799176037" class="bg-brand-primary hover:bg-gray-700 text-white px-5 py-2.5 rounded-lg text-base font-bold shadow-lg transition-all duration-300 transform hover:scale-105">
+                        <span class="en-text">BOOK NOW</span>
+                        <span class="gr-text language-hidden">ΚΡΑΤΗΣΗ ΤΩΡΑ</span>
+                    </a>
+                </div>
+                 <div class="flex md:hidden items-center space-x-4">
+                    <button id="langToggleMobile" class="bg-brand-accent hover:bg-accent-dark text-white px-3 py-1.5 rounded-md text-sm font-semibold transition-colors duration-300">
+                        <span class="en-text">Ελ</span>
+                        <span class="gr-text language-hidden">En</span>
+                    </button>
+                    <a href="tel:+35799176037" class="bg-brand-primary hover:bg-gray-700 text-white px-3 py-1.5 rounded-md text-sm font-semibold">
+                        <span class="en-text">Call</span>
+                        <span class="gr-text language-hidden">Καλέστε</span>
+                    </a>
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-pattern bg-gradient-to-br from-light-bg to-white dark:from-gray-900 dark:to-gray-900 pt-24 pb-28 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <p class="text-lg md:text-xl text-brand-accent dark:text-brand-accent uppercase font-bold tracking-widest mb-2">
+                    <span class="en-text">Kissonerga, Paphos</span>
+                    <span class="gr-text language-hidden">Κισσόνεργα, Πάφος</span>
+                </p>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight mb-4">
+                    <span class="en-text">JOHN'S BARBERS</span>
+                    <span class="gr-text language-hidden">ΚΟΥΡΕΙΟ ΤΟΥ ΓΙΑΝΝΗ</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-light text-gray-700 dark:text-gray-300 mb-8">
+                    <span class="en-text">Quality Cuts. Unbeatable Value.</span>
+                    <span class="gr-text language-hidden">Κουρέματα Ποιότητας. Ασυναγώνιστη Αξία.</span>
+                </p>
+                
+                <div class="inline-block bg-brand-primary text-white text-4xl md:text-5xl font-extrabold py-5 px-10 rounded-xl shadow-2xl ring-4 ring-brand-accent mb-10 transform hover:scale-105 transition-transform duration-300">
+                    <span class="en-text">ALL HAIRCUTS ONLY €10</span>
+                    <span class="gr-text language-hidden">ΟΛΑ ΤΑ ΚΟΥΡΕΜΑΤΑ ΜΟΝΟ €10</span>
+                </div>
+
+                <p class="text-md text-gray-500 dark:text-gray-400">
+                    <span class="en-text">3A Spyro Kyprianou Street • Call for Availability</span>
+                    <span class="gr-text language-hidden">Σπύρου Κυπριανού 3Α • Καλέστε για Διαθεσιμότητα</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-accent text-white py-16 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="p-8 rounded-lg">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+                    <span class="en-text">10-Visit Loyalty Reward!</span>
+                    <span class="gr-text language-hidden">Ανταμοιβή Πίστης 10 Επισκέψεων!</span>
+                </h2>
+                <p class="text-xl md:text-2xl font-light mb-6">
+                    <span class="en-text">Your 11th haircut is FREE when you return!</span>
+                    <span class="gr-text language-hidden">Το 11ο κούρεμά σας είναι ΔΩΡΕΑΝ όταν επιστρέψετε!</span>
+                </p>
+                <a href="tel:+35799176037" class="inline-block bg-white text-brand-primary px-8 py-3 rounded-lg font-bold text-lg shadow-xl hover:bg-light-bg transition-colors duration-300">
+                    <span class="en-text">Start Your Card Today</span>
+                    <span class="gr-text language-hidden">Ξεκινήστε την Κάρτα σας Σήμερα</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="py-20 bg-light-bg dark:bg-gray-800 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
+                    <span class="en-text">Our Signature Services</span>
+                    <span class="gr-text language-hidden">Οι Υπηρεσίες Μας</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    <span class="en-text">Precision men's grooming by a skilled professional.</span>
+                    <span class="gr-text language-hidden">Ακριβής ανδρική περιποίηση από έμπειρο επαγγελματία.</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-2xl p-8 text-center transition-all duration-300 hover:shadow-brand-accent/50 hover:ring-2 ring-brand-accent">
+                    <div class="text-6xl mb-4 text-brand-accent">✂️</div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+                        <span class="en-text">The Signature Cut</span>
+                        <span class="gr-text language-hidden">Το Υπογραφή Κούρεμα</span>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        <span class="en-text">Any style, any length. A professional, detailed men's haircut.</span>
+                        <span class="gr-text language-hidden">Οποιοδήποτε στυλ, οποιοδήποτε μήκος. Ένα επαγγελματικό, λεπτομερές ανδρικό κούρεμα.</span>
+                    </p>
+                    <div class="text-3xl font-extrabold text-brand-primary dark:text-brand-accent">€10</div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-2xl p-8 text-center transition-all duration-300 hover:shadow-brand-accent/50 hover:ring-2 ring-brand-accent">
+                    <div class="text-6xl mb-4 text-brand-accent">🧔</div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+                        <span class="en-text">Beard & Tidy Up</span>
+                        <span class="gr-text language-hidden">Γένια & Καθάρισμα</span>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        <span class="en-text">Precise beard line-up, trimming, and shaping.</span>
+                        <span class="gr-text language-hidden">Ακριβής διαμόρφωση γενειάδας, κούρεμα και σχήμα.</span>
+                    </p>
+                    <div class="text-3xl font-extrabold text-brand-primary dark:text-brand-accent">€4</div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-700 rounded-xl shadow-2xl p-8 text-center transition-all duration-300 hover:shadow-brand-accent/50 hover:ring-2 ring-brand-accent">
+                    <div class="text-6xl mb-4 text-brand-accent">👑</div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+                        <span class="en-text">The Royal Combo</span>
+                        <span class="gr-text language-hidden">Το Βασιλικό Πακέτο</span>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        <span class="en-text">Full Haircut + Beard Tidy + Wash & Style. Total transformation.</span>
+                        <span class="gr-text language-hidden">Πλήρες Κούρεμα + Γένια + Λούσιμο & Styling.</span>
+                    </p>
+                    <div class="text-3xl font-extrabold text-brand-primary dark:text-brand-accent">€14</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
+                    <span class="en-text">What Our Clients Say</span>
+                    <span class="gr-text language-hidden">Τι Λένε οι Πελάτες Μας</span>
+                </h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    <span class="en-text">The best part of our job is a happy customer.</span>
+                    <span class="gr-text language-hidden">Το καλύτερο μέρος της δουλειάς μας είναι ένας ευτυχισμένος πελάτης.</span>
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-light-bg dark:bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-brand-accent">
+                    <p class="italic text-gray-700 dark:text-gray-300 mb-4">
+                        <span class="en-text">"John is a master barber. Quick, professional, and the price is unbelievable for the quality. I recommend him to everyone visiting Paphos!"</span>
+                        <span class="gr-text language-hidden">"Ο Γιάννης είναι κορυφαίος κουρέας. Γρήγορος, επαγγελματίας και η τιμή είναι απίστευτη για την ποιότητα. Τον συστήνω σε όλους όσους επισκέπτονται την Πάφο!"</span>
+                    </p>
+                    <div class="font-bold text-brand-primary dark:text-brand-accent">— Alex P. (Tourist from UK)</div>
+                </div>
+
+                <div class="bg-light-bg dark:bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-brand-accent">
+                    <p class="italic text-gray-700 dark:text-gray-300 mb-4">
+                        <span class="en-text">"The best barber in Kissonerga, hands down. I used to pay double for a less precise fade. Great service, always friendly."</span>
+                        <span class="gr-text language-hidden">"Ο καλύτερος κουρέας στην Κισσόνεργα, χωρίς αμφιβολία. Συνήθιζα να πληρώνω τα διπλά για λιγότερο ακριβές κούρεμα. Εξαιρετική εξυπηρέτηση, πάντα φιλικός."</span>
+                    </p>
+                    <div class="font-bold text-brand-primary dark:text-brand-accent">— Andreas S. (Local Resident)</div>
+                </div>
+
+                <div class="bg-light-bg dark:bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-brand-accent">
+                    <p class="italic text-gray-700 dark:text-gray-300 mb-4">
+                        <span class="en-text">"I walked in and got a fantastic haircut right away. John speaks perfect English and understood exactly what I wanted. A hidden gem!"</span>
+                        <span class="gr-text language-hidden">"Μπήκα μέσα και έκανα ένα φανταστικό κούρεμα αμέσως. Ο Γιάννης μιλάει τέλεια Αγγλικά και κατάλαβε ακριβώς τι ήθελα. Ένα κρυμμένο διαμάντι!"</span>
+                    </p>
+                    <div class="font-bold text-brand-primary dark:text-brand-accent">— Ben R. (Holidaymaker)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-brand-primary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-accent mb-6">
+                        <span class="en-text">Visit Us Today</span>
+                        <span class="gr-text language-hidden">Επισκεφθείτε μας Σήμερα</span>
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-brand-accent text-3xl mr-4">📞</div>
+                            <div>
+                                <p class="font-bold text-xl">
+                                    <span class="en-text">Phone</span>
+                                    <span class="gr-text language-hidden">Τηλέφωνο</span>
+                                </p>
+                                <a href="tel:+35799176037" class="text-2xl hover:text-brand-accent transition-colors">+357 99 176 037</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-brand-accent text-3xl mr-4">📍</div>
+                            <div>
+                                <p class="font-bold text-xl">
+                                    <span class="en-text">Address</span>
+                                    <span class="gr-text language-hidden">Διεύθυνση</span>
+                                </p>
+                                <p class="text-lg">
+                                    <span class="en-text">3A Spyro Kyprianou Street, Kissonerga, Paphos, Cyprus</span>
+                                    <span class="gr-text language-hidden">Σπύρου Κυπριανού 3Α, Κισσόνεργα, Πάφος, Κύπρος</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-brand-accent text-3xl mr-4">⏰</div>
+                            <div>
+                                <p class="font-bold text-xl">
+                                    <span class="en-text">Hours</span>
+                                    <span class="gr-text language-hidden">Ώρες Λειτουργίας</span>
+                                </p>
+                                <p class="text-lg">
+                                    <span class="en-text">Walk-ins Welcome. Call for today's hours.</span>
+                                    <span class="gr-text language-hidden">Δεχόμαστε χωρίς ραντεβού. Καλέστε για τις σημερινές ώρες.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden h-80">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=John's%20Barbers%20Kissonerga%2C%20Paphos&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="hidden">
+                         <p class="p-8 text-center text-gray-400">
+                             <span class="en-text">Google Map Placeholder: Embed a live map here!</span>
+                             <span class="gr-text language-hidden">Ενσωμάτωση Google Map: Ενσωματώστε έναν ζωντανό χάρτη εδώ!</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-2xl font-extrabold text-brand-accent mb-2">
+                <span class="en-text">JOHN'S BARBERS</span>
+                <span class="gr-text language-hidden">ΚΟΥΡΕΙΟ ΤΟΥ ΓΙΑΝΝΗ</span>
+            </div>
+            <p class="text-gray-400">
+                <span class="en-text">Precision Cuts. Affordable Price.</span>
+                <span class="gr-text language-hidden">Κουρέματα Ακριβείας. Προσιτή Τιμή.</span>
+            </p>
+            <p class="text-gray-500 text-sm mt-4">
+                <span class="en-text">&copy; 2025 John's Barbers. All rights reserved. | Site by Top Developer.</span>
+                <span class="gr-text language-hidden">&copy; 2025 Κουρείο του Γιάννη. Με την επιφύλαξη παντός δικαιώματος.</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Language toggle functionality - Enhanced to handle both nav buttons
+        let currentLang = 'en';
+        const langToggleDesktop = document.getElementById('langToggle');
+        const langToggleMobile = document.getElementById('langToggleMobile');
+
+        function toggleLanguage() {
+            const enTexts = document.querySelectorAll('.en-text');
+            const grTexts = document.querySelectorAll('.gr-text');
+            
+            if (currentLang === 'en') {
+                // Switch to Greek
+                enTexts.forEach(el => el.classList.add('language-hidden'));
+                grTexts.forEach(el => el.classList.remove('language-hidden'));
+                currentLang = 'gr';
+                document.documentElement.lang = 'el';
+            } else {
+                // Switch to English
+                grTexts.forEach(el => el.classList.add('language-hidden'));
+                enTexts.forEach(el => el.classList.remove('language-hidden'));
+                currentLang = 'en';
+                document.documentElement.lang = 'en';
+            }
+        }
+        
+        langToggleDesktop.addEventListener('click', toggleLanguage);
+        langToggleMobile.addEventListener('click', toggleLanguage);
+        
+        // Smooth scrolling for better UX (retained and essential)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dark mode detection (retained)
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
